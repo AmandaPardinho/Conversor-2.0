@@ -1,2 +1,4 @@
-package telas;public class CoinScreen {
+package telas;
+
+public class CoinScreen {
 }
