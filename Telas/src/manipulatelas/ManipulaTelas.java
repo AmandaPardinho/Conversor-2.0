@@ -1,2 +1,7 @@
-package manipulatelas;public class ManipulaTelas {
+package manipulatelas;
+
+public class ManipulaTelas {
+    public static void main(String[] args) {
+
+    }
 }
