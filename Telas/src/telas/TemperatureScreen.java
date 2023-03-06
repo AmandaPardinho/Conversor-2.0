@@ -1,2 +1,4 @@
-package telas;public class TemperatureScreen {
+package telas;
+
+public class TemperatureScreen {
 }
