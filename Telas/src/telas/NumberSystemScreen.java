@@ -1,2 +1,4 @@
-package telas;public class NumberSystemScreen {
+package telas;
+
+public class NumberSystemScreen {
 }
