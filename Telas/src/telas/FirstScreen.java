@@ -43,6 +43,9 @@ public class FirstScreen {
         //Adicionando o JPanel ao JFrame
         frameConversor.add(panelConversor);
 
+        //Adicionando o Layout
+        panelConversor.setLayout(new FlowLayout());
+
         //Adicionando a JLabel ao JPanel
         panelConversor.add(conversor);
         conversor.setPreferredSize(new Dimension(100,50));
