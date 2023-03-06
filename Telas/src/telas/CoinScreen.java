@@ -85,11 +85,31 @@ public class CoinScreen {
 
         //Adicionando os componentes da tela ao JPanel
         panelMoedas.add(labelComboBoxMoedas);
+        labelComboBoxMoedas.setPreferredSize(new Dimension(100,50));
+        labelComboBoxMoedas.setFont(new Font("Arial", Font.BOLD, 18));
+
         panelMoedas.add(labelTxtMoedas);
+        labelTxtMoedas.setPreferredSize(new Dimension(100,50));
+        labelTxtMoedas.setFont(new Font("Arial", Font.BOLD, 18));
+
         panelMoedas.add(comboBoxMoedas1);
+        comboBoxMoedas1.setPreferredSize(new Dimension(100,50));
+        comboBoxMoedas1.setFont(new Font("Arial", Font.PLAIN, 16));
+
         panelMoedas.add(comboBoxMoedas2);
+        comboBoxMoedas2.setPreferredSize(new Dimension(100,50));
+        comboBoxMoedas2.setFont(new Font("Arial", Font.PLAIN, 16));
+
         panelMoedas.add(textFieldMoedas1);
+        textFieldMoedas1.setPreferredSize(new Dimension(100,50));
+        textFieldMoedas1.setFont(new Font("Arial", Font.PLAIN, 16));
+
         panelMoedas.add(textFieldMoedas2);
+        textFieldMoedas2.setPreferredSize(new Dimension(100,50));
+        textFieldMoedas2.setFont(new Font("Arial", Font.PLAIN, 16));
+
         panelMoedas.add(buttonConverter);
+        buttonConverter.setPreferredSize(new Dimension(100,50));
+        buttonConverter.setFont(new Font("Arial", Font.BOLD, 16));
     }
 }
