@@ -8,4 +8,5 @@ public class ScrollScreen extends JPanel {
     private String[] opcaoConversor = {"Selecione uma opção de conversor", "Moedas", "Sistema Numérico", "Temperatura"};
 
     private JLabel conversor = new JLabel("Conversor");
+    private JComboBox selecionarConversor = new JComboBox(opcaoConversor);
 }
