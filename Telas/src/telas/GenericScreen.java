@@ -3,7 +3,7 @@ package telas;
 import javax.swing.*;
 import java.awt.*;
 
-public class CoinScreen {
+public class GenericScreen {
     //Definição das opções do ComboBox
     private String[] opcaoMoedas = {"Selecione uma moeda", "Dólar (USD)", "Euro (EUR)", "Real (BRL)",
             "Peso Argentino (ARS)","Libra Esterlina (GBP)", "Yuan Chinês (CNY)"};
@@ -75,11 +75,12 @@ public class CoinScreen {
         this.buttonConverter = buttonConverter;
     }
 
-    public CoinScreen(){
+    public GenericScreen(){
 
         //Adicionando o JPanel ao JFrame
         frameMoedas.add(panelMoedas);
         frameMoedas.setVisible(true);
+        frameMoedas.setSize(500,300);
 
         //Adicionando o Layout
         panelMoedas.setLayout(new FlowLayout());
