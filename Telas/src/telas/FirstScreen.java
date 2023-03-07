@@ -42,6 +42,8 @@ public class FirstScreen {
     public FirstScreen(){
         //Adicionando o JPanel ao JFrame
         frameConversor.add(panelConversor);
+        frameConversor.setVisible(true);
+        frameConversor.setSize(500,300);
 
         //Adicionando o Layout
         panelConversor.setLayout(new FlowLayout());
