@@ -79,6 +79,7 @@ public class CoinScreen {
 
         //Adicionando o JPanel ao JFrame
         frameMoedas.add(panelMoedas);
+        frameMoedas.setVisible(true);
 
         //Adicionando o Layout
         panelMoedas.setLayout(new FlowLayout());
