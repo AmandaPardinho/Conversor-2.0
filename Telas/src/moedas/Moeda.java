@@ -6,10 +6,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import org.json.JSONObject;
-//https://pt.stackoverflow.com/questions/318716/importar-a-biblioteca-do-postgres-na-ide-intellij-idea
-//link se aplica a qualquer biblioteca.jar
+    //https://pt.stackoverflow.com/questions/318716/importar-a-biblioteca-do-postgres-na-ide-intellij-idea
+        //link se aplica a qualquer biblioteca.jar
 
 public class Moeda {
+    private static String siglaMoedas;
+
     public static String precoMoedas(String siglaMoedas)throws Exception{
         try {
             URL url = new URL("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL");
@@ -34,7 +36,7 @@ public class Moeda {
     }
 
     public static double valorMoeda() throws Exception{
-        String moeda = precoMoeda();
+        String moeda = precoMoedas(siglaMoedas);
         double moedaValor = Double.parseDouble(moeda);
 
         return moedaValor;
