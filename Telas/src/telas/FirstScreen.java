@@ -2,6 +2,8 @@ package telas;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class FirstScreen {
 
@@ -44,6 +46,17 @@ public class FirstScreen {
         frameConversor.add(panelConversor);
         frameConversor.setVisible(true);
         frameConversor.setSize(500,300);
+        frameConversor.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frameConversor.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                super.windowClosing(e);
+                if(JOptionPane.showConfirmDialog(null, "Deseja fechar o programa?") ==
+                        JOptionPane.OK_OPTION){
+                    System.exit(0);
+                }
+            }
+        });
 
         //Adicionando o Layout
         panelConversor.setLayout(new FlowLayout());
