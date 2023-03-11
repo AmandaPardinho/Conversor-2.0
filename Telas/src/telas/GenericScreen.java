@@ -2,6 +2,9 @@ package telas;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 
 public class GenericScreen {
     //Definição das opções do ComboBox
@@ -114,4 +117,19 @@ public class GenericScreen {
         buttonConverter.setPreferredSize(new Dimension(100,50));
         buttonConverter.setFont(new Font("Arial", Font.BOLD, 16));
     }
+
+    public void fecharTela(){
+        frameMoedas.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frameMoedas.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                super.windowClosing(e);
+                if(JOptionPane.showConfirmDialog(null, "Deseja fechar o programa?") ==
+                        JOptionPane.OK_OPTION){
+                    System.exit(0);
+                }
+            }
+        });
+    }
+
 }
