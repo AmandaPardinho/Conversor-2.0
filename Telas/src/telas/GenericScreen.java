@@ -8,15 +8,24 @@ import java.awt.event.WindowEvent;
 
 public class GenericScreen {
     //Componentes da tela genérica
-    private JFrame frameGeneric = new JFrame("Conversor de Moedas");
+    private JFrame frameGeneric = new JFrame();
     private JPanel panelGeneric = new JPanel();
-    private JLabel labelComboBoxGeneric = new JLabel("Moedas");
-    private JLabel labelTxtGeneric = new JLabel("Valor a converter");
+    private JLabel labelComboBoxGeneric = new JLabel();
+    private JLabel labelTxtGeneric = new JLabel();
     private JComboBox comboBoxGeneric1 = new JComboBox<>();
     private JComboBox comboBoxGeneric2 = new JComboBox<>();
     private JTextField textFieldGeneric1 = new JTextField();
     private JTextField textFieldGeneric2 = new JTextField();
     private JButton buttonConverter = new JButton("Converter");
+
+    public GenericScreen(JFrame frameGeneric, JLabel labelComboBoxGeneric, JLabel labelTxtGeneric, JComboBox
+            comboBoxGeneric1, JComboBox comboBoxGeneric2) {
+        this.frameGeneric = frameGeneric;
+        this.labelComboBoxGeneric = labelComboBoxGeneric;
+        this.labelTxtGeneric = labelTxtGeneric;
+        this.comboBoxGeneric1 = comboBoxGeneric1;
+        this.comboBoxGeneric2 = comboBoxGeneric2;
+    }
 
     public JLabel getLabelComboBoxGeneric() {
         return labelComboBoxGeneric;
@@ -74,7 +83,7 @@ public class GenericScreen {
         this.buttonConverter = buttonConverter;
     }
 
-    public GenericScreen(){
+    public GenericScreen(String conversorDeMoedas, String moedas, String valorAConverter, String[] opcaoMoedas, String[] strings){
 
         //Adicionando o JPanel ao JFrame
         frameGeneric.add(panelGeneric);
