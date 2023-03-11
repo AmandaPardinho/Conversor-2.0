@@ -7,67 +7,63 @@ import java.awt.event.WindowEvent;
 
 
 public class GenericScreen {
-    //Definição das opções do ComboBox
-    private String[] opcaoMoedas = {"Selecione uma moeda", "Dólar (USD)", "Euro (EUR)", "Real (BRL)",
-            "Peso Argentino (ARS)","Libra Esterlina (GBP)", "Yuan Chinês (CNY)"};
-
-    //Componentes da tela Moedas
-    private JFrame frameMoedas = new JFrame("Conversor de Moedas");
-    private JPanel panelMoedas = new JPanel();
-    private JLabel labelComboBoxMoedas = new JLabel("Moedas");
-    private JLabel labelTxtMoedas = new JLabel("Valor a converter");
-    private JComboBox comboBoxMoedas1 = new JComboBox<>(opcaoMoedas);
-    private JComboBox comboBoxMoedas2 = new JComboBox<>(opcaoMoedas);
-    private JTextField textFieldMoedas1 = new JTextField();
-    private JTextField textFieldMoedas2 = new JTextField();
+    //Componentes da tela genérica
+    private JFrame frameGeneric = new JFrame("Conversor de Moedas");
+    private JPanel panelGeneric = new JPanel();
+    private JLabel labelComboBoxGeneric = new JLabel("Moedas");
+    private JLabel labelTxtGeneric = new JLabel("Valor a converter");
+    private JComboBox comboBoxGeneric1 = new JComboBox<>();
+    private JComboBox comboBoxGeneric2 = new JComboBox<>();
+    private JTextField textFieldGeneric1 = new JTextField();
+    private JTextField textFieldGeneric2 = new JTextField();
     private JButton buttonConverter = new JButton("Converter");
 
-    public JLabel getLabelComboBoxMoedas() {
-        return labelComboBoxMoedas;
+    public JLabel getLabelComboBoxGeneric() {
+        return labelComboBoxGeneric;
     }
 
-    public void setLabelComboBoxMoedas(JLabel labelComboBoxMoedas) {
-        this.labelComboBoxMoedas = labelComboBoxMoedas;
+    public void setLabelComboBoxGeneric(JLabel labelComboBoxGeneric) {
+        this.labelComboBoxGeneric = labelComboBoxGeneric;
     }
 
-    public JLabel getLabelTxtMoedas() {
-        return labelTxtMoedas;
+    public JLabel getLabelTxtGeneric() {
+        return labelTxtGeneric;
     }
 
-    public void setLabelTxtMoedas(JLabel labelTxtMoedas) {
-        this.labelTxtMoedas = labelTxtMoedas;
+    public void setLabelTxtGeneric(JLabel labelTxtGeneric) {
+        this.labelTxtGeneric = labelTxtGeneric;
     }
 
-    public JComboBox getComboBoxMoedas1() {
-        return comboBoxMoedas1;
+    public JComboBox getComboBoxGeneric1() {
+        return comboBoxGeneric1;
     }
 
-    public void setComboBoxMoedas1(JComboBox comboBoxMoedas1) {
-        this.comboBoxMoedas1 = comboBoxMoedas1;
+    public void setComboBoxGeneric1(JComboBox comboBoxGeneric1) {
+        this.comboBoxGeneric1 = comboBoxGeneric1;
     }
 
-    public JComboBox getComboBoxMoedas2() {
-        return comboBoxMoedas2;
+    public JComboBox getComboBoxGeneric2() {
+        return comboBoxGeneric2;
     }
 
-    public void setComboBoxMoedas2(JComboBox comboBoxMoedas2) {
-        this.comboBoxMoedas2 = comboBoxMoedas2;
+    public void setComboBoxGeneric2(JComboBox comboBoxGeneric2) {
+        this.comboBoxGeneric2 = comboBoxGeneric2;
     }
 
-    public JTextField getTextFieldMoedas1() {
-        return textFieldMoedas1;
+    public JTextField getTextFieldGeneric1() {
+        return textFieldGeneric1;
     }
 
-    public void setTextFieldMoedas1(JTextField textFieldMoedas1) {
-        this.textFieldMoedas1 = textFieldMoedas1;
+    public void setTextFieldGeneric1(JTextField textFieldGeneric1) {
+        this.textFieldGeneric1 = textFieldGeneric1;
     }
 
-    public JTextField getTextFieldMoedas2() {
-        return textFieldMoedas2;
+    public JTextField getTextFieldGeneric2() {
+        return textFieldGeneric2;
     }
 
-    public void setTextFieldMoedas2(JTextField textFieldMoedas2) {
-        this.textFieldMoedas2 = textFieldMoedas2;
+    public void setTextFieldGeneric2(JTextField textFieldGeneric2) {
+        this.textFieldGeneric2 = textFieldGeneric2;
     }
 
     public JButton getButtonConverter() {
@@ -81,46 +77,47 @@ public class GenericScreen {
     public GenericScreen(){
 
         //Adicionando o JPanel ao JFrame
-        frameMoedas.add(panelMoedas);
-        frameMoedas.setVisible(true);
-        frameMoedas.setSize(500,300);
+        frameGeneric.add(panelGeneric);
+        frameGeneric.setVisible(true);
+        frameGeneric.setSize(500,300);
 
         //Adicionando o Layout
-        panelMoedas.setLayout(new FlowLayout());
+        panelGeneric.setLayout(new FlowLayout());
 
         //Adicionando os componentes da tela ao JPanel
-        panelMoedas.add(labelComboBoxMoedas);
-        labelComboBoxMoedas.setPreferredSize(new Dimension(100,50));
-        labelComboBoxMoedas.setFont(new Font("Arial", Font.BOLD, 18));
+        panelGeneric.add(labelComboBoxGeneric);
+        labelComboBoxGeneric.setPreferredSize(new Dimension(100,50));
+        labelComboBoxGeneric.setFont(new Font("Arial", Font.BOLD, 18));
 
-        panelMoedas.add(labelTxtMoedas);
-        labelTxtMoedas.setPreferredSize(new Dimension(100,50));
-        labelTxtMoedas.setFont(new Font("Arial", Font.BOLD, 18));
+        panelGeneric.add(labelTxtGeneric);
+        labelTxtGeneric.setPreferredSize(new Dimension(100,50));
+        labelTxtGeneric.setFont(new Font("Arial", Font.BOLD, 18));
 
-        panelMoedas.add(comboBoxMoedas1);
-        comboBoxMoedas1.setPreferredSize(new Dimension(100,50));
-        comboBoxMoedas1.setFont(new Font("Arial", Font.PLAIN, 16));
+        panelGeneric.add(comboBoxGeneric1);
+        comboBoxGeneric1.setPreferredSize(new Dimension(100,50));
+        comboBoxGeneric1.setFont(new Font("Arial", Font.PLAIN, 16));
 
-        panelMoedas.add(comboBoxMoedas2);
-        comboBoxMoedas2.setPreferredSize(new Dimension(100,50));
-        comboBoxMoedas2.setFont(new Font("Arial", Font.PLAIN, 16));
+        panelGeneric.add(comboBoxGeneric2);
+        comboBoxGeneric2.setPreferredSize(new Dimension(100,50));
+        comboBoxGeneric2.setFont(new Font("Arial", Font.PLAIN, 16));
 
-        panelMoedas.add(textFieldMoedas1);
-        textFieldMoedas1.setPreferredSize(new Dimension(100,50));
-        textFieldMoedas1.setFont(new Font("Arial", Font.PLAIN, 16));
+        panelGeneric.add(textFieldGeneric1);
+        textFieldGeneric1.setPreferredSize(new Dimension(100,50));
+        textFieldGeneric1.setFont(new Font("Arial", Font.PLAIN, 16));
 
-        panelMoedas.add(textFieldMoedas2);
-        textFieldMoedas2.setPreferredSize(new Dimension(100,50));
-        textFieldMoedas2.setFont(new Font("Arial", Font.PLAIN, 16));
+        panelGeneric.add(textFieldGeneric2);
+        textFieldGeneric2.setPreferredSize(new Dimension(100,50));
+        textFieldGeneric2.setFont(new Font("Arial", Font.PLAIN, 16));
 
-        panelMoedas.add(buttonConverter);
+        panelGeneric.add(buttonConverter);
         buttonConverter.setPreferredSize(new Dimension(100,50));
         buttonConverter.setFont(new Font("Arial", Font.BOLD, 16));
     }
 
     public void fecharTela(){
-        frameMoedas.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        frameMoedas.addWindowListener(new WindowAdapter() {
+        frameGeneric.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
+        frameGeneric.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 super.windowClosing(e);
